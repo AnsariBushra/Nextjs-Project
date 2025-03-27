@@ -3,7 +3,7 @@ import { useState, useContext } from "react";
 import { useRouter } from "next/navigation";
 import { AuthContext } from "./context/AuthContext";
 
-export default function AuthPage() {
+export default function Home() {
   const router = useRouter();
   const { login } = useContext(AuthContext);
   const [form, setForm] = useState({ email: "", password: "" });
