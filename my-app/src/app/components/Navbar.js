@@ -3,6 +3,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { useRouter } from "next/navigation";
 import { Menu, X } from "lucide-react";
+import { Rocket } from "lucide-react";
 
 export default function Navbar() {
   const { user, logout } = useContext(AuthContext);
@@ -23,7 +24,9 @@ export default function Navbar() {
 
   return (
     <nav className="bg-gray-800 p-4 text-white flex justify-between items-center relative">
-      <h1 className="font-bold text-lg">🚀 My Dashboard</h1>
+      <h1 className="font-bold text-lg flex flex-row">
+        <Rocket className="mx-2 mt-0.5 fill-red-600" /> My Dashboard
+      </h1>
 
       <button
         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
